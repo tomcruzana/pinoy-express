@@ -1,0 +1,9 @@
+.custom-cursor {
+  cursor: pointer !important;
+}
+
+.options-item:hover {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+}
