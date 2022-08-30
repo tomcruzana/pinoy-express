@@ -3163,8 +3163,9 @@ ul.side-navbar-items li a:hover {
   margin-right: 10px;
 }
 .product-nav .nav-item .nav-link.active {
-  background-color: #292929;
-  color: #fff;
+  /* background-color: #292929; */
+  background-color: var(--secondary-color);
+  color: #000;
 }
 
 /***testimonial-area***/

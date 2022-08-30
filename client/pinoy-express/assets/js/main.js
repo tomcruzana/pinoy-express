@@ -9,6 +9,33 @@
         $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a', function (e) {
             e.preventDefault();
         })
+
+         /*-------------------------------------
+            Contact Us Send button
+        -------------------------------------*/
+        $('#button-contact-us-send').on('click', function() {
+            Swal.fire({
+                title: 'Thank You!',
+                text: 'Your message has been sent.',
+                icon: 'success'
+            })
+        });
+
+        /*-------------------------------------
+            addToOrder button
+        -------------------------------------*/
+        $('.addToOrderBtn').on('click', function() {
+            Swal.fire({
+                title: 'Order placed!',
+                text: 'Good job!',
+                icon: 'success',
+                timer: 2000,
+                showConfirmButton: false
+            })
+            const myModalEl = document.getElementById('exampleModal2');
+            const modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        });
        
         /*-------------------------------------
             menu
@@ -181,27 +208,27 @@
         }
 
         /**banner-move**/
-        function touches(e){
-            var x = e.touches ? e.touches[0].clientX : e.clientX, 
-                    y = e.touches ? e.touches[0].clientY : e.clientY;
-          var w = window.innerWidth / 2;
-          var h = window.innerHeight / 2;
+        // function touches(e){
+        //     var x = e.touches ? e.touches[0].clientX : e.clientX, 
+        //             y = e.touches ? e.touches[0].clientY : e.clientY;
+        //   var w = window.innerWidth / 2;
+        //   var h = window.innerHeight / 2;
           
-          var l = -(x - w) / (w / 1) - 1;
-          var t = -(y - h) / (h / 1) - 1;
-              //10 / (y - (h / 2)) * 10;             
-          console.log(y + ' | ' + h + ' | ' + t);
+        //   var l = -(x - w) / (w / 1) - 1;
+        //   var t = -(y - h) / (h / 1) - 1;
+        //       //10 / (y - (h / 2)) * 10;             
+        //   console.log(y + ' | ' + h + ' | ' + t);
           
-            TweenMax.to($('.banner-bg-img'), 1, {
-                top: t + "%",
-                left: l + "%"
-            });
+        //     TweenMax.to($('.banner-bg-img'), 1, {
+        //         top: t + "%",
+        //         left: l + "%"
+        //     });
             
-        }
+        // }
         
-        window.addEventListener("mousemove", touches);
-        window.addEventListener("touchstart", touches);
-        window.addEventListener("touchmove", touches);
+        // window.addEventListener("mousemove", touches);
+        // window.addEventListener("touchstart", touches);
+        // window.addEventListener("touchmove", touches);
 
         
 
